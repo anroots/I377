@@ -7,8 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import ee.itcollege.i377.team08.model.DatabaseModel;
 
 public abstract class CrudDao<T extends DatabaseModel> {
@@ -74,8 +72,7 @@ public abstract class CrudDao<T extends DatabaseModel> {
 	public void delete(Integer id) {
 		T entity = find(id);
 		entity.setRemoved(new Date());
-		String remover = SecurityContextHolder.getContext().getAuthentication()
-				.getName();
+		String remover = DatabaseModel.getCurrentUserName();
 		entity.setRemover(remover);
 		update(entity);
 	}

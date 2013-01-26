@@ -25,15 +25,16 @@ public class Rank extends DatabaseModel implements Serializable {
 
 	@Column(name = "Kood")
 	@NotNull
-	@Size(min = 2, max = 10)
+	@Size(min = 2, max = 16)
 	private String code;
 	
 	@Column(name = "Nimetus")
 	@NotNull
-	@Size(min = 5, max = 50)
+	@Size(min = 2, max = 32)
 	private String name;
 	
 	@ManyToOne
+	@NotNull
 	@PrimaryKeyJoinColumn(name="TYYP")
 	private RankType type;
 	

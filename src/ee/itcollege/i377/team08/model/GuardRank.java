@@ -11,6 +11,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = ("PiirivalvurAuaste"))
@@ -21,17 +22,21 @@ public class GuardRank extends DatabaseModel implements Serializable {
 
 	private static final long serialVersionUID = -7030775697103650332L;
 
+	@NotNull
 	@Column(name = "alates")
 	private Date start;
 
+	@NotNull
 	@Column(name = "kuni")
 	private Date end;
 
 	@ManyToOne
+	@NotNull
 	@PrimaryKeyJoinColumn(name = "auaste_id")
 	private Rank rank;
 
 	@ManyToOne
+	@NotNull
 	@PrimaryKeyJoinColumn(name = "piirivalvur_id")
 	private Guard guard;
 

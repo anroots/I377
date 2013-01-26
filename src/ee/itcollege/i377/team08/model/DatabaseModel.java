@@ -126,13 +126,13 @@ public abstract class DatabaseModel {
 	}
 	
 	@PrePersist
-    public void recordCreated() {
+    public void setCreator() {
 		setCreator(getCurrentUserName());
         setCreated( new Date() );
     }
 
     @PreUpdate
-    public void recordModified() {
+    public void setModifier() {
     	setModifier(getCurrentUserName());
         setModified( new Date() );
     }
@@ -142,7 +142,7 @@ public abstract class DatabaseModel {
         throw new InvalidActivityException("Can not delete records, instead check for the removed column");
     }
     
-    private String getCurrentUserName() {
+    public static String getCurrentUserName() {
     	 if (SecurityContextHolder.getContext().getAuthentication() == null) 
     		 return "anonymous";
     	   	 

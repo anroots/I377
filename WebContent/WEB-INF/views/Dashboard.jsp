@@ -5,10 +5,10 @@
 <pr:MainTemplate>
 	<div class="jumbotron">
 		<h1>
-			TODO
+			<spring:message code="template.title" />
 		</h1>
 		<p class="lead">
-			Dash here
+			<spring:message code="dash.lead" /> <a href="https://github.com/anroots/I377">GitHub</a>
 		</p>
 
 	</div>

@@ -5,9 +5,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import ee.itcollege.i377.team08.dao.GuardDao;
-import ee.itcollege.i377.team08.model.Guard;
-
 public class DateEditor extends PropertyEditorSupport {
 
 	@Override

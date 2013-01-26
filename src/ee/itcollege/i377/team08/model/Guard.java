@@ -10,6 +10,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Range;
 
 @Entity
@@ -40,16 +41,17 @@ public class Guard extends DatabaseModel implements Serializable {
 
 	@NotNull
 	@Size(min = 4, max = 255)
+	@Email
 	private String email;
 
 	@Column(name = "isikukood")
 	@NotNull
-	@Size(min = 6, max = 20)
+	@Size(min = 5, max = 32)
 	private String socialSecurityNumber;
 
 	@Column(name = "sodurikood")
 	@NotNull
-	@Size(min = 4, max = 50)
+	@Size(min = 3, max = 32)
 	private String code;
 
 	@Column(name = "sugu")
