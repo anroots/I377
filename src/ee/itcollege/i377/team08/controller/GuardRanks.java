@@ -1,5 +1,7 @@
 package ee.itcollege.i377.team08.controller;
 
+import java.util.Date;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ee.itcollege.i377.team08.dao.GuardDao;
 import ee.itcollege.i377.team08.dao.GuardRankDao;
 import ee.itcollege.i377.team08.dao.RankDao;
+import ee.itcollege.i377.team08.editor.DateEditor;
 import ee.itcollege.i377.team08.editor.GuardEditor;
 import ee.itcollege.i377.team08.editor.RankEditor;
 import ee.itcollege.i377.team08.model.Guard;
@@ -108,5 +111,6 @@ public class GuardRanks extends EntityController implements CrudEntityController
     protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) {
 		binder.registerCustomEditor(Rank.class, new RankEditor(rankDao));
 		binder.registerCustomEditor(Guard.class, new GuardEditor(guardDao));
+		binder.registerCustomEditor(Date.class,new DateEditor());
     }
 }

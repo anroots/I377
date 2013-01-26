@@ -39,7 +39,8 @@
 			<spring:message code="Start" />
 		</form:label>
 		<div class="controls">
-			<form:input path="start" cssClass="date input-medium"/>
+		<input type="text" id="start" name="start" value="${guardRank.getStartAsString() }" 
+		class="date input-medium" required />
 			<form:errors path="start" element="p" cssClass="alert alert-error" />
 		</div>
 	</div>
@@ -49,7 +50,8 @@
 			<spring:message code="End" />
 		</form:label>
 		<div class="controls">
-			<form:input path="end"  cssClass="date input-medium"/>
+		<input type="text" id="end" name="end" value="${guardRank.getEndAsString() }" 
+		class="date input-medium" required />
 			<form:errors path="end" element="p" cssClass="alert alert-error" />
 		</div>
 	</div>

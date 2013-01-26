@@ -1,6 +1,7 @@
 package ee.itcollege.i377.team08.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -44,6 +45,22 @@ public class GuardRank extends DatabaseModel implements Serializable {
 
 	public Date getEnd() {
 		return end;
+	}
+
+	public String getEndAsString() {
+		if (end == null){
+			return null;
+		}
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		return formatter.format(end);
+	}
+
+	public String getStartAsString() {
+		if (start == null){
+			return null;
+		}
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		return formatter.format(start);
 	}
 
 	public void setEnd(Date end) {

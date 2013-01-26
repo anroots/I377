@@ -28,8 +28,8 @@
 				<tr>
 					<td><c:out value="${guardRank.getGuard().getFullName()}" /></td>
 					<td><c:out value="${guardRank.getRank().getName() }" /></td>
-					<td><c:out value="${guardRank.start}" /></td>
-					<td><c:out value="${guardRank.end}" /></td>
+					<td><c:out value="${guardRank.getStartAsString()}" /></td>
+					<td><c:out value="${guardRank.getEndAsString()}" /></td>
 					<sec:authorize access="hasAnyRole('ROLE_SUPERVISOR, ROLE_ADMIN')">
 						<td><a
 							href="<c:url value="/guardranks/edit?id=${guardRank.id}" ></c:url>">
