@@ -13,6 +13,8 @@
 					class="icon-tasks"></i> <spring:message code="nav.rankTypes" /></a></li>
 			<li><a href="<c:url value="/ranks/list"/>"><i
 					class="icon-leaf"></i> <spring:message code="nav.ranks" /></a></li>
+			<li><a href="<c:url value="/guardranks/list"/>"><i
+					class="icon-folder-open"></i> <spring:message code="nav.guardRanks" /></a></li>
 		</ul>
 	</div>
 </sec:authorize>
