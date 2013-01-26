@@ -1,0 +1,143 @@
+commit 8de639be6d91b6341d93b4b6803eceaadf29c63e
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 14:47:08 2013 +0200
+
+    modify gitignore
+
+commit dd9c51bb528b6690e2e9a53f401cffe6854de073
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 14:43:46 2013 +0200
+
+    Add RankTypeEditor
+
+commit a0ffca1d220566bf6257ac8af5693d737cad328a
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 14:13:44 2013 +0200
+
+    Organize classes, refactor code
+
+commit 757f2f455456805d6fc0e0f2c1299aa71760725f
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 13:12:24 2013 +0200
+
+    Remove rank type
+
+commit 4f233f52c8b283ad2454de1e8bc2084f589b1085
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 12:45:24 2013 +0200
+
+    Add rank views
+
+commit 84958b3e7e23b22063c61f358de3fdbaab8b4e8d
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 11:34:31 2013 +0200
+
+    Rename rank to ranktype, misread the spec
+
+commit fc3094d7ae340ef5dd4b05a1eff623b55438b305
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Sat Jan 26 11:18:15 2013 +0200
+
+    Edit readme
+
+commit 213730de0a7945f31a7723bb808c380fad02f0af
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 16:41:08 2013 +0200
+
+    Implement rank edit
+
+commit e627e6fe92345b8ac414c2667bf385dd1fcc2aa4
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 16:32:34 2013 +0200
+
+    Implement rank ADD
+
+commit 7f4a6e95ecf4d5ccbdd513a48fe264adfaed41c8
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 16:20:59 2013 +0200
+
+    Implement rank delete
+
+commit 225d04fc60e473461cbcc2a89d05a06cd2a5ffa5
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 16:13:03 2013 +0200
+
+    Add initial data for ranks
+
+commit dc13f4eb86a2d766cfa13afb7fde51cf97bc5c42
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 16:06:40 2013 +0200
+
+    Add controller/dao/bean for ranks
+
+commit cf2318e4cbf90969438a26bdc94de911bdf92e48
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 15:47:23 2013 +0200
+
+    Refactor Crud baseclass inheritance
+
+commit a238e38c47ed295e88bfef7ea7123a86909ab158
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 15:30:18 2013 +0200
+
+    Add more sample data, refactor data inserter interface
+
+commit 51a6b2f25509754be25c9442af21843a656bcadd
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 12:43:38 2013 +0200
+
+    Implement test-data inserting from a bean config file
+
+commit 1a555e67b8967923b16c7cdafa32897a9416e2ae
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 11:10:36 2013 +0200
+
+    Refactor DAO interface
+
+commit 6075315df67f1aa03d5ff3bda2f1ca1e98c19364
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 10:49:40 2013 +0200
+
+    Implement guard delete
+
+commit 3c77c20fc6e031293198ee1ec6763cd77ddbfa2c
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 09:47:49 2013 +0200
+
+    Make guard edit form a tag so that it can be used in both add/edit view. Add logo
+
+commit b7067a7cf228f1bd008c43bbdc1878bbcc4b9d85
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 02:11:10 2013 +0200
+
+    Implement guard add view
+
+commit b933dd1040ccc024d2fe5caa2dd39e9edde25432
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Fri Jan 25 01:08:54 2013 +0200
+
+    Add guard list view
+
+commit 9bc59df1b997c4b2e623e837a754438f96a0a85c
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Thu Jan 24 23:47:55 2013 +0200
+
+    Dash/welcome view
+
+commit 79a2f52ce369e2b4c1465ab0161ebf6ea0f5b3c1
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Thu Jan 24 17:51:43 2013 +0200
+
+    Finished with welcome
+
+commit aabf1c347eff4b9677af1a9d6613061471a1c090
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Thu Jan 24 16:54:41 2013 +0200
+
+    Working setup
+
+commit c075503395f665d7466f3caa714b4ba46ff61156
+Author: Ando Roots <ando@sqroot.eu>
+Date:   Thu Jan 24 15:51:51 2013 +0200
+
+    Initial commit

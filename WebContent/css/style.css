@@ -1,0 +1,29 @@
+body {
+	margin-top: 60px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 30px;
+	border-top: 1px solid #e8e8e8;
+}
+
+.jumbotron {
+	margin: 60px 0;
+	text-align: center;
+}
+
+.jumbotron h1 {
+	font-size: 72px;
+	line-height: 1;
+}
+
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
+
+#content-container {
+	background-color: #fff;
+	padding: 20px 10px;
+}

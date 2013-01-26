@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+    <bean id="guard1" class="ee.itcollege.i377.team08.model.Guard">
+        <property name="firstName">
+            <value>Ando</value>
+        </property>
+        <property name="lastName">
+            <value>Roots</value>
+        </property>
+        <property name="gender">
+            <value>0</value>
+        </property>
+        <property name="address">
+            <value>Akadeemia tee 102</value>
+        </property>
+        <property name="phone">
+            <value>372581414152</value>
+        </property>
+        <property name="email">
+            <value>anroots@itcollege.ee</value>
+        </property>
+        <property name="socialSecurityNumber">
+            <value>3121521542</value>
+        </property>
+        <property name="code">
+            <value>VL_121</value>
+        </property>
+        <property name="comment">
+            <value>Liiga noor, et olla valvur</value>
+        </property>
+    </bean>
+    <bean id="guard2" class="ee.itcollege.i377.team08.model.Guard">
+        <property name="firstName">
+            <value>Jaak</value>
+        </property>
+        <property name="lastName">
+            <value>Sinihammas</value>
+        </property>
+        <property name="gender">
+            <value>0</value>
+        </property>
+        <property name="address">
+            <value>Lepistiku 3a</value>
+        </property>
+        <property name="phone">
+            <value>3725984152</value>
+        </property>
+        <property name="email">
+            <value>jaak.sinihammas@hot.ee</value>
+        </property>
+        <property name="socialSecurityNumber">
+            <value>36512514785</value>
+        </property>
+        <property name="code">
+            <value>VL_122</value>
+        </property>
+    </bean>
+     <bean id="guard3" class="ee.itcollege.i377.team08.model.Guard">
+        <property name="firstName">
+            <value>Merike</value>
+        </property>
+        <property name="lastName">
+            <value>Kollanokk</value>
+        </property>
+        <property name="gender">
+            <value>1</value>
+        </property>
+        <property name="address">
+            <value>Kuusiku 7</value>
+        </property>
+        <property name="phone">
+            <value>55441087</value>
+        </property>
+        <property name="email">
+            <value>merik44e@hotmail.com</value>
+        </property>
+        <property name="socialSecurityNumber">
+            <value>47741258410</value>
+        </property>
+        <property name="code">
+            <value>AR_122</value>
+        </property>
+    </bean>
+    <bean id="rankType1" class="ee.itcollege.i377.team08.model.RankType">
+        <property name="code">
+            <value>ER-GUA</value>
+        </property>
+         <property name="name">
+            <value>Guard</value>
+        </property>
+         <property name="comment">
+            <value>Normal guard</value>
+        </property>
+    </bean>
+    <bean id="rankType2" class="ee.itcollege.i377.team08.model.RankType">
+        <property name="code">
+            <value>ER-SUP</value>
+        </property>
+         <property name="name">
+            <value>Supervisor</value>
+        </property>
+         <property name="comment">
+            <value>Manages guards</value>
+        </property>
+    </bean>
+    <bean id="rankType3" class="ee.itcollege.i377.team08.model.RankType">
+        <property name="code">
+            <value>ER-BUIL</value>
+        </property>
+         <property name="name">
+            <value>Builder</value>
+        </property>
+         <property name="comment">
+            <value>Builds barricades and roads</value>
+        </property>
+    </bean>
+     <bean id="rank1" class="ee.itcollege.i377.team08.model.Rank">
+        <property name="code">
+            <value>RR-EAM</value>
+        </property>
+         <property name="name">
+            <value>Private</value>
+        </property>
+        <property name="type" ref="rankType1" />
+    </bean>
+     <bean id="rank2" class="ee.itcollege.i377.team08.model.Rank">
+        <property name="code">
+            <value>RR-MAN</value>
+        </property>
+         <property name="name">
+            <value>Manager</value>
+        </property>
+        <property name="type" ref="rankType2" />
+    </bean>
+</beans>
