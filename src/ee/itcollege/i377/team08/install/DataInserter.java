@@ -10,9 +10,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import ee.itcollege.i377.team08.dao.GuardDao;
+import ee.itcollege.i377.team08.dao.GuardRankDao;
 import ee.itcollege.i377.team08.dao.RankDao;
 import ee.itcollege.i377.team08.dao.RankTypeDao;
 import ee.itcollege.i377.team08.model.Guard;
+import ee.itcollege.i377.team08.model.GuardRank;
 import ee.itcollege.i377.team08.model.Rank;
 import ee.itcollege.i377.team08.model.RankType;
 
@@ -30,6 +32,9 @@ public class DataInserter {
 	@Resource
 	RankDao rankDao;
 	
+	@Resource
+	GuardRankDao guardRankDao;
+	
 	ApplicationContext applicationContext;
 
 	@PostConstruct
@@ -40,8 +45,23 @@ public class DataInserter {
 
 		createRankTypes()
 		.createRanks()
-		.createGuards();
+		.createGuards()
+		.createGuardRanks();
 
+	}
+
+	private DataInserter createGuardRanks() {
+		if (guardRankDao.countAll() > 0) {
+			return this;
+		}
+
+		Map<String, GuardRank> guardRanks = applicationContext.getBeansOfType(GuardRank.class);
+
+		for (Map.Entry<String, GuardRank> entry : guardRanks.entrySet()) {
+			GuardRank guardRank = entry.getValue();
+			guardRankDao.save(guardRank);
+		}
+		return this;
 	}
 
 	private DataInserter createRankTypes() {

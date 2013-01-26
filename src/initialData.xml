@@ -104,10 +104,10 @@
             <value>ER-SUP</value>
         </property>
          <property name="name">
-            <value>Supervisor</value>
+            <value>Accountant</value>
         </property>
          <property name="comment">
-            <value>Manages guards</value>
+            <value>Deals with bookkeeping</value>
         </property>
     </bean>
     <bean id="rankType3" class="ee.itcollege.i377.team08.model.RankType">
@@ -115,7 +115,7 @@
             <value>ER-BUIL</value>
         </property>
          <property name="name">
-            <value>Builder</value>
+            <value>Radar-Technologist</value>
         </property>
          <property name="comment">
             <value>Builds barricades and roads</value>
@@ -135,8 +135,81 @@
             <value>RR-MAN</value>
         </property>
          <property name="name">
-            <value>Manager</value>
+            <value>Lieutenant</value>
         </property>
         <property name="type" ref="rankType2" />
     </bean>
+    <bean id="rank3" class="ee.itcollege.i377.team08.model.Rank">
+        <property name="code">
+            <value>RR-MAN</value>
+        </property>
+         <property name="name">
+            <value>Major</value>
+        </property>
+        <property name="type" ref="rankType2" />
+    </bean>
+    <bean id="rank4" class="ee.itcollege.i377.team08.model.Rank">
+        <property name="code">
+            <value>RR-MAN</value>
+        </property>
+         <property name="name">
+            <value>General</value>
+        </property>
+        <property name="type" ref="rankType3" />
+    </bean>
+    <bean id="guardrank1" class="ee.itcollege.i377.team08.model.GuardRank">
+        <property name="guard" ref="guard1" />
+        <property name="rank" ref="rank1" />
+        <property name="start">
+           <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2012-01-01" />
+			</bean>
+        </property>
+        <property name="end">
+            <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2012-05-02" />
+			</bean>
+        </property>
+        <property name="comment">
+            <value>Trial period ended</value>
+        </property>
+    </bean>
+    <bean id="guardrank2" class="ee.itcollege.i377.team08.model.GuardRank">
+        <property name="guard" ref="guard1" />
+        <property name="rank" ref="rank2" />
+        <property name="start">
+            <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2012-05-02" />
+			</bean>
+        </property>
+        <property name="end">
+            <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2013-01-01" />
+			</bean>
+        </property>
+        <property name="comment">
+            <value>Left service</value>
+        </property>
+    </bean>
+    <bean id="guardrank3" class="ee.itcollege.i377.team08.model.GuardRank">
+        <property name="guard" ref="guard2" />
+        <property name="rank" ref="rank3" />
+        <property name="start">
+           <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2012-01-01" />
+			</bean>
+        </property>
+        <property name="end">
+            <bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2013-12-31" />
+			</bean>
+        </property>
+        <property name="comment">
+            <value>Started yearly contract</value>
+        </property>
+    </bean>
+    
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd" />
+	</bean>
 </beans>
