@@ -38,9 +38,9 @@
 						</a>
 							<ul class="dropdown-menu">
 							<sec:authorize access="hasRole('ROLE_ADMIN')">
-							<li><a href="<c:url value="/admin/resetDb"/>">
+							<!-- <li><a href="<c:url value="/admin/resetDb"/>">
 										<i class="icon-trash"></i> <spring:message code="nav.resetDb" />
-								</a></li>
+								</a></li> -->
 							</sec:authorize>
 								<li><a href="<c:url value="/j_spring_security_logout"/>">
 										<i class="icon-remove"></i> <spring:message code="nav.logout" />

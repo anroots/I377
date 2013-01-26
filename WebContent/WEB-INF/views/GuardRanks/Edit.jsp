@@ -13,6 +13,7 @@
 	<form:form action="edit" method="POST" modelAttribute="guardRank">
 		<forms:GuardRank />
 
+		<input type="hidden" name="id" value="${guardRank.id }" />
 		<input type="submit" value="<spring:message code="Save" />"
 			class="btn btn-primary " />
 		<a class="btn" href="<c:url value="/guardranks/list"/>"> <spring:message
