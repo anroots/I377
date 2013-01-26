@@ -27,30 +27,30 @@ public abstract class DatabaseModel {
 					name = "generatorName",
 					pkColumnName = "SEQ_NAME",
 					valueColumnName = "SEQ_COUNT")
-	private int id;
+	protected int id;
 	
 	@Column(name = "avaja")
-	private String creator;
+	protected String creator;
 	
 	@Column(name = "avatud")
-	private Date created;
+	protected Date created;
 	
 	@Column(name = "muutja")
-	private String modifier;
+	protected String modifier;
 	
 	@Column(name = "muudetud")
-	private Date modified;
+	protected Date modified;
 	
 	@Column(name = "sulgeja")
-	private String remover;
+	protected String remover;
 	
 	@Column(name = "suletud")
-	private Date removed;
+	protected Date removed;
 	
 	@Column(name = "kommentaar")
-	private String comment;
+	protected String comment;
 	
-	private int version;
+	protected int version;
 	
 	public int getVersion() {
 		return version;

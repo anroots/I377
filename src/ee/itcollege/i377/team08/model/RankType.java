@@ -48,4 +48,20 @@ public class RankType extends DatabaseModel implements Serializable {
 		this.name = name;
 	}
 	
+	@Override
+    public int hashCode() {
+        return new Integer(id).hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (! (obj instanceof RankType)) {
+            return false;
+        }
+        return this.id == ((RankType)obj).getId();
+    }
+
 }
